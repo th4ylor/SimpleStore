@@ -6,12 +6,16 @@ let itens = container.querySelectorAll('.list .item')
 let indicators = document.querySelector('.indicators')
 let dots = indicators.querySelectorAll('ul li')
 let list = container.querySelector('.list')
+let section = document.querySelector('section')
 
 let active = 0
 let firstPosition = 0
 let lastPosition = itens.length - 1
 
 function setSlider(){
+    section.classList.remove("bg1", "bg2", "bg3")
+    section.classList.add(`bg${active + 1}`)
+
     let itemOld = container.querySelector('.list .item.active')
     itemOld.classList.remove('active')
 
@@ -34,6 +38,7 @@ nextButton.onclick = () => {
     setSlider()
     itens[active].classList.add('active')
 
+
 }
 
 
@@ -48,5 +53,6 @@ prevButton.onclick = () => {
     }
     setSlider()
     itens[active].classList.add('active')
+  
 
 }

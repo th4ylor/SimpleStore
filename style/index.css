@@ -34,10 +34,12 @@ header {
 
     text-decoration: none;
     color: white;
+    
+    
 }
 
 header img{
-        width: 230px;
+        width: 200px;
 }
 
 header nav ul{

@@ -7,9 +7,9 @@ let indicators = document.querySelector('.indicators')
 let dots = indicators.querySelectorAll('ul li')
 let list = container.querySelector('.list')
 let section = document.querySelector('section')
-let button1 = document.getElementById('saiba1')
-const button2 = document.querySelector('saiba2')
-const button3 = document.querySelector('saiba3')
+let infoButtons = document.querySelectorAll('.information')
+let modal = document.querySelector('.modal')
+let button = document.getElementById('#saiba1')
 
 let active = 0
 let firstPosition = 0
@@ -56,6 +56,7 @@ prevButton.onclick = () => {
     itens[active].classList.add('active')
 };
 
-button1.addEventListener("click", () => {
-    window.location.href = "./pages/saibaferrari.html"
-});
+function abrirModal(){
+    document.getElementById('saiba').showModal();
+}
+

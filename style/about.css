@@ -15,7 +15,6 @@ body{
     color: white;
     font-size: 16px;
     overflow: hidden;
-    
 }
 
 header {
@@ -58,7 +57,6 @@ header nav ul li a{
 header nav ul li a:hover{
     color: rgba(0, 0, 0, 0.489);
     transform: scale(1.15);
-
 }
 
 section{
@@ -75,9 +73,9 @@ section .container{
     transform: translate(-50%, -30%);
     min-width: 700px;
 }
+
 section .container .about p{
     transform: translateY(10%);
-
 }
 
 section .container .img img{
@@ -87,5 +85,4 @@ section .container .img img{
     transform: translate(0 , -10%);
     border-radius: 25px;
     box-shadow: 0 20px 10px rgba(0,0,0,35);
-
 }

@@ -55,7 +55,7 @@ header nav ul{
 header nav ul li a{
     display: inline-block;
     transition: color 0.3s, transform 0.3s;
-
+    pointer-events: auto;
     
 }
 
@@ -282,7 +282,6 @@ section .list .item .information {
     transition: 0.7s;
     transition-delay: 0.3s;
     opacity: 0;
-
 }
 
 section .list .item .content h2{
@@ -293,9 +292,9 @@ section .list .item .content .description{
     transition-delay: 0.7s;
     text-shadow: 2px 2px 2px black;
 }
+
 section .list .item .content .information{
     transition-delay: 0.9s;
-
 }
 
 section .list .item.active {
@@ -320,18 +319,36 @@ section .list .item.active .car-img{
 
 .modal{
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: rgb(0, 109, 204);
+    justify-content: center;
+    border: none;
+    background: transparent; 
+    padding: 0;
+    font-family: "League Gothic", sans-serif;
+    height: 100%;
+    width:100vw;
+}
 
+.modal::backdrop{
+    background: rgba(0, 0, 0, 0.301);
+    backdrop-filter:blur(2px);
 }
 
 .saiba{
-    position: relative;
-    width: 400px;
-    height: 350px;
-    background: blue;
-    border-radius: 24px;
-
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    max-height: 80vh;
+    width: min(90vw, 420px);
+    background: #beff1b;
+    border-radius: 19px;
+    padding: 25px;
+    box-shadow: 10px 10px 45px black;
+    overflow: auto;
 }
+
+.modal .saiba h1{
+    text-shadow: 7px 7px 15px rgba(0, 0, 0, 0.527);
+    text-align: center;
+}
+
+

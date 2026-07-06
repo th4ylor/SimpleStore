@@ -9,7 +9,8 @@ let list = container.querySelector('.list')
 let section = document.querySelector('section')
 let infoButtons = document.querySelectorAll('.information')
 let modal = document.querySelector('.modal')
-let button = document.getElementById('#saiba1')
+let button1 = document.getElementById('saiba1')
+
 
 let active = 0
 let firstPosition = 0
@@ -57,6 +58,16 @@ prevButton.onclick = () => {
 };
 
 function abrirModal(){
-    document.getElementById('saiba').showModal();
+    if(active === 1){
+        document.getElementById('saiba1').showModal();
+    }
+    else if(active === 2){
+        document.getElementById('saiba2').showModal();
+    }
+    else if(active === 3){
+        document.getElementById('saiba3').showModal();
+    }
 }
 
+/* Modal nao vai abrir, o showModal() só funciona se o elment HTML for um <dialog>
+preciso remover os id's duplicados (saiba1,2,3). e colocar cada div no seu respectivo <dialog> */

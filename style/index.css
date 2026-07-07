@@ -365,8 +365,9 @@ dialog{
 }
 
 dialog::backdrop{
-    background: rgba(0, 0, 0, 0.733);
-    filter: blur(22px);
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.596);
+
 }
 
 dialog h1{

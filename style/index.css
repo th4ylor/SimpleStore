@@ -74,18 +74,41 @@ section{
 }
 
 section.bg1{
-    background-image: linear-gradient( #34FDA8, #aa678b);
+    background: 
+    radial-gradient(circle at 20% 20%, rgba(12, 166, 255, 0.637), transparent 35%),
+    radial-gradient(circle at 80% 80%, rgba(234, 51, 66, 0.486), transparent 40%),
+    linear-gradient(
+        180deg,
+        #fff01baf 0%,
+        #adadad 60%,
+        #000000 100%
+    );
 
 }
 
 section.bg2{
-    background-image: linear-gradient( #2D7ED0,#22B5AA);
 
+    background: 
+    radial-gradient(circle at 20% 20%, rgba(12, 206, 255, 0.637), transparent 35%),
+    radial-gradient(circle at 80% 80%, rgba(234, 51, 179, 0.486), transparent 40%),
+    linear-gradient(
+        180deg,
+        #2D7ED0 0%,
+        #adadad 60%,
+        #22B5AA 100%
+    );
 }
 
 section.bg3{
-    background-image: radial-gradient(#91C9DE, #9EA4CA ) ;
-
+    background: 
+    radial-gradient(circle at 20% 20%, rgba(198, 12, 255, 0.637), transparent 35%),
+    radial-gradient(circle at 80% 80%, rgba(72, 234, 51, 0.678), transparent 40%),
+    linear-gradient(
+        180deg,
+        #9EA4CA 0%,
+        #adadad 60%,
+        #91C9DE 100%
+    );
 }
 
 section .arrows{
@@ -207,9 +230,15 @@ section .list .item .content .information{
     color: black;
     font-weight: bold;
     font-family: "League Gothic", sans-serif;
-
+    transition-delay: 0s;
+    transition: 0.3s;
 }
 
+section .list .item .content .information:hover{
+    transition-delay: 0s;
+    color: rgb(0, 0, 0);
+    transform: scale(1.2);
+}
 
 section .list::before{
     content: '';
@@ -317,38 +346,52 @@ section .list .item.active .car-img{
     opacity: 1;
 }
 
-.modal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: justify;
+    transform: translate(-50%, -50%);
     border: none;
-    background: transparent; 
-    padding: 0;
+    background: transparent;
     font-family: "League Gothic", sans-serif;
-    height: 100%;
-    width:100vw;
-}
-
-.modal::backdrop{
-    background: rgba(0, 0, 0, 0.301);
-    backdrop-filter:blur(2px);
-}
-
-.saiba{
     color: rgb(0, 0, 0);
     font-size: 13px;
-    max-height: 80vh;
     width: min(90vw, 420px);
-    background: #beff1b;
+    background: linear-gradient(135deg, #8ad4ff 0%, #e6e6e6 50%, #ff8484 100%);
     border-radius: 19px;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 10px 10px 45px black;
-    overflow: auto;
 }
 
-.modal .saiba h1{
-    text-shadow: 7px 7px 15px rgba(0, 0, 0, 0.527);
-    text-align: center;
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.733);
+    filter: blur(22px);
 }
+
+dialog h1{
+    text-shadow: 7px 7px 15px rgba(0, 0, 0, 0.527);
+    padding: 15px;
+    text-align: center;   
+}
+
+dialog button{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s, transform 0.3s;
+}
+
+dialog button:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.3);
+}
+
+
 
 

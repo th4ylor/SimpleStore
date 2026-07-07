@@ -29,14 +29,12 @@
             </ul>
         </nav>
     </header>
-
     <section class="container bg1">
         <div class="list">
             <div class="item active">
                 <div class="car-img">
                     <img src="style/img/1.png" alt="Imagem carro">
                 </div>
-
                 <div class="content">
                     <p class="car-information">
                         Unico dono
@@ -49,7 +47,7 @@
                         dolorem eos quasi minus eius in voluptas harum natus necessitatibus, repudiandae est soluta
                         quia. Ab, magni vero.
                     </p>
-                    <button onclick="abrirModal()" id="saiba1" class="information">Saiba Mais</button>
+                    <button onclick="document.getElementById('mod1').showModal()" id="saiba1" class="information">Saiba Mais</button>
                 </div>
             </div>
 
@@ -70,15 +68,13 @@
                         dolorem eos quasi minus eius in voluptas harum natus necessitatibus, repudiandae est soluta
                         quia. Ab, magni vero.
                     </p>
-                    <button id=saiba2 class="information">Saiba Mais</button>
+                    <button onclick="document.getElementById('mod2').showModal()" id="saiba2" class="information">Saiba Mais</button>
                 </div>
             </div>
-
             <div class="item">
                 <div class="car-img">
                     <img src="style/img/3.png" alt="Imagem carro">
                 </div>
-
                 <div class="content">
                     <p class="car-information">
                         Unico dono
@@ -91,8 +87,7 @@
                         dolorem eos quasi minus eius in voluptas harum natus necessitatibus, repudiandae est soluta
                         quia. Ab, magni vero.
                     </p>
-                    
-                    <button id=saiba3 class="information">Saiba Mais</button>
+                    <button onclick="document.getElementById('mod3').showModal()" id="saiba3" class="information">Saiba Mais</button>
                 </div>
             </div>
 
@@ -113,21 +108,20 @@
         </div>
         </div>
     </section>
-    <dialog id="saiba" class="modal">
-        <div class="saiba">
-            <div id="saiba1" class="saiba1">
-                <h1>JHDJHDSH</h1>
-                <p>This project is for demonstration and educational purposes only. It is not a real online store, and no products displayed here are available for purchase. All names, images, prices, and descriptions are used as sample content to showcase the design, layout, and functionality of the website. Any resemblance to existing brands, products, or businesses is purely coincidental.</p>
-            </div>
-            <div id="saiba2" class="saiba2">
-                <h1>JHDJHDSH</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis consectetur quae consequatur aperiam fuga, eos voluptatum explicabo soluta earum qui ad velit nemo perspiciatis, illum nobis et sit? Dignissimos, temporibus.</p>
-            </div>
-            <div id="saiba3" class="saiba3">
-                <h1>JHDJHDSH</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis consectetur quae consequatur aperiam fuga, eos voluptatum explicabo soluta earum qui ad velit nemo perspiciatis, illum nobis et sit? Dignissimos, temporibus.</p>
-            </div>
-        </div>
+    <dialog id="mod1" class="mod">
+        <h1>SAIBA MAIS1</h1>
+        <p>This project is for demonstration and educational purposes only. It is not a real online store, and no products displayed here are available for purchase. All names, images, prices, and descriptions are used as sample content to showcase the design, layout, and functionality of the website. Any resemblance to existing brands, products, or businesses is purely coincidental.</p>
+       <button type="button" onclick="this.closest('dialog').close()">&times;</button>
+    </dialog>
+    <dialog id="mod2" class="mod">
+        <h1>SAIBA MAIS2</h1>
+        <p>This project is for demonstration and educational purposes only. It is not a real online store, and no products displayed here are available for purchase. All names, images, prices, and descriptions are used as sample content to showcase the design, layout, and functionality of the website. Any resemblance to existing brands, products, or businesses is purely coincidental.</p>
+        <button onclick="document.getElementById('mod2').close()">x</button>
+    </dialog>
+    <dialog id="mod3" class="mod">
+        <h1>SAIBA MAIS3</h1>
+        <p>This project is for demonstration and educational purposes only. It is not a real online store, and no products displayed here are available for purchase. All names, images, prices, and descriptions are used as sample content to showcase the design, layout, and functionality of the website. Any resemblance to existing brands, products, or businesses is purely coincidental.</p>
+        <button onclick="document.getElementById('mod3').close()">x</button>
     </dialog>
 
     <script src="scripts.js"></script>
